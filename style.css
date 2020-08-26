@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    font-family: junegull-regular;
+}
+
+
+
+/* ######## FONTS ######### */
+h1{
+    margin: 0;
+}
+
+p{
+    font-family: roboto;
+    margin-left: 1.5rem;
+    color: #132C5E;
+}
+/* ######## FONTS ENDS######### */
+
+
+/* ######## HEADER ######### */
+header {
+    background-image: url(image/svg/confetti.svg);
+  
+}
+nav{
+    display: flex;
+    flex-direction:row-reverse;
+    height: 2rem;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+
+ul, li{
+    padding: 0.5rem;
+    display: flex;
+    height: 2rem;
+    text-decoration: none;
+}
+
+.logo {
+    width: 20rem;
+    padding: 5rem 10rem;
+    position: absolute;
+    display: block;
+    animation: pop;
+    animation-duration: 5s; 
+}
+
+@keyframes pop {
+    0% {
+        width: 50%;
+    }
+    50% {
+        width: 70%;
+    }
+    100%{
+        width: 20rem;
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottle {
+    margin-top: 5rem;
+    display: block;
+    position: relative;
+    animation: linear;
+    animation: moveFromLeft;
+    animation-duration: 2s; 
+}
+
+@keyframes moveFromLeft {
+    0% {
+        left: -100%;
+        transform: translateX(-10)
+    }
+    100% {
+        left: 0%;
+        transform: translateX(0%)
+    }
+}
+
+/* ######## HEADER ENDS ######### */
+
+
+.columns {
+    display: flex;
+}
+
+.column {
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #E9501D;
+    
+} 
+.column-img {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.column h1{
+    color: #F7BE00;
+}
+
+.cat-right{
+    width: 20rem;
+}
+
+ #eyes {
+    width: 20%;
+    /* display: block;
+    position: absolute;
+    display: block;
+    animation: openClose;
+    animation-duration: 5s;  */
+}
+
+/* @keyframes openClose {
+    0% {
+        color: #F2CB05;
+    }
+    50% {
+        color:black;
+    }
+    100%{
+        color: #F2CB05;
+    }
+}  */
+
+
+.yellow-pattern {
+    display: block;
+    position: relative;
+    animation: linear;
+    animation: moveFromLeft;
+    animation-duration: 9s; 
+}
