@@ -3,7 +3,10 @@
     font-family: junegull-regular;
 }
 
-
+.headerBG {
+    background:  #F5EFEF; 
+    z-index: 2;
+}
 
 /* ######## FONTS ######### */
 h1{
@@ -20,9 +23,11 @@ p{
 
 /* ######## HEADER ######### */
 header {
-    background-image: url(image/svg/confetti.svg);
-  
+    background-image:url(image/svg/confetti.svg);
+    background-attachment: fixed;
+    background-size: cover;
 }
+
 nav{
     display: flex;
     flex-direction:row-reverse;
@@ -40,8 +45,8 @@ ul, li{
 }
 
 .logo {
-    width: 20rem;
-    padding: 5rem 10rem;
+    width: 25%;
+    padding: 5% 10%;
     position: absolute;
     display: block;
     animation: pop;
@@ -53,10 +58,10 @@ ul, li{
         width: 50%;
     }
     50% {
-        width: 70%;
+        width: 65%;
     }
     100%{
-        width: 20rem;
+        width: 25%;
     }
 }
 
@@ -67,12 +72,13 @@ ul, li{
 }
 
 .bottle {
-    margin-top: 5rem;
+    margin-top: 5%;
+    width: 30%;
     display: block;
     position: relative;
-    animation: linear;
-    animation: moveFromLeft;
-    animation-duration: 2s; 
+   
+    animation: moveFromLeft 2s linear;
+   
 }
 
 @keyframes moveFromLeft {
@@ -118,16 +124,15 @@ ul, li{
     width: 20rem;
 }
 
- #eyes {
-    width: 20%;
-    /* display: block;
+/* #eyes {
+    width: 10%;
+     
     position: absolute;
     display: block;
     animation: openClose;
-    animation-duration: 5s;  */
+    animation-duration: 5s;   
 }
-
-/* @keyframes openClose {
+ /* @keyframes openClose {
     0% {
         color: #F2CB05;
     }
@@ -137,7 +142,7 @@ ul, li{
     100%{
         color: #F2CB05;
     }
-}  */
+}   */
 
 
 .yellow-pattern {
@@ -146,4 +151,65 @@ ul, li{
     animation: linear;
     animation: moveFromLeft;
     animation-duration: 9s; 
+} 
+
+.patternBG {
+    background: #2c2718;
+}
+button {
+    background: pink;
+    border: none;
+    padding: 0.5rem;
+    color: #132C5E;
+}
+
+input {
+    padding: 0.5rem;
+    border: none;
+   
+}
+::placeholder {
+   color: #132C5E;
+}
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        background-image:url(image/svg/confetti.svg);
+        background-size: 25%;
+        height: 740px;
+
+    }
+
+    .bottle {
+        margin-top: 7rem;
+        width: 90%;
+    }
+
+    .logo {
+        width: 50%;
+        animation: pop 5s;
+    }
+    
+    @keyframes pop {
+        0% {
+            width: 100%;
+        }
+        50% {
+            width: 150%;
+        }
+        100%{
+            width: 50%;
+        }
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+     .toggled{
+        display: none;
+    }
+
 }
