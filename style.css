@@ -1,16 +1,30 @@
+/*  ###########################################################
+    ######################### DESKTOP #########################
+    ########################################################### */
+    .infoBlockDesktop {
+        display: none;
+    }
+    .rightInfoBlockDesktop {
+        display: none;
+    }
+    .centerInfoBlock {
+        display: none;
+    }
+    .leftInfoBlockDesktop {
+        display: none;
+    }
+
 * {
     margin: 0;
     font-family: junegull-regular;
 }
 
-.headerBG {
-    background:  #F5EFEF; 
-    z-index: 2;
-}
+
 
 /* ######## FONTS ######### */
 h1{
     margin: 0;
+    text-align: center;
 }
 
 p{
@@ -18,22 +32,44 @@ p{
     margin-left: 1.5rem;
     color: #132C5E;
 }
-/* ######## FONTS ENDS######### */
+/* ########################################
+############ END OF FONTS ENDS ############ 
+##########################################*/
+
 
 
 /* ######## HEADER ######### */
+.headerBG {
+    background:  #F5EFEF; 
+    height: 100vh;
+    z-index: 2;
+}
+.headerBGClean {
+    background:  #E9501D; 
+    height: 100vh;
+    z-index: 2;
+}
+
 header {
     background-image:url(image/svg/confetti.svg);
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 nav{
     display: flex;
     flex-direction:row-reverse;
-    height: 2rem;
+    height: 2vh;
     justify-content: space-between;
     margin-right: 1rem;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #E9501D;
+    font-size: 1rem;
 }
 
 
@@ -41,11 +77,10 @@ ul, li{
     padding: 0.5rem;
     display: flex;
     height: 2rem;
-    text-decoration: none;
 }
 
 .logo {
-    width: 25%;
+    width: 25vh;
     padding: 5% 10%;
     position: absolute;
     display: block;
@@ -55,13 +90,13 @@ ul, li{
 
 @keyframes pop {
     0% {
-        width: 50%;
+        width: 50vh;
     }
     50% {
-        width: 65%;
+        width: 85vh;
     }
     100%{
-        width: 25%;
+        width: 25vh;
     }
 }
 
@@ -73,12 +108,10 @@ ul, li{
 
 .bottle {
     margin-top: 5%;
-    width: 30%;
+    width: 55vh;
     display: block;
     position: relative;
-   
     animation: moveFromLeft 2s linear;
-   
 }
 
 @keyframes moveFromLeft {
@@ -91,42 +124,329 @@ ul, li{
         transform: translateX(0%)
     }
 }
+/* ########################################
+######## END OF HEADER ENDS ######### 
+##########################################*/
 
-/* ######## HEADER ENDS ######### */
 
-
-.columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 50px;
-    grid-gap: 3px;
+/* ######## GENERALL INFO BLOCK ######### */
+/* H1 */
+.orangeHeading {
+    color: #E9501D;
+    width: 100vw;
+    margin-top: 2rem;
+    position: absolute;
 }
 
-.column {
-    padding: 6rem;
+.yellowHeading {
+    color: #F7BE00;
+    width: 100vw;
+    margin-top: 2rem;
+    position: absolute;
+}
+
+
+.infoBlock {
+    display: flex;
+}
+
+.infoBlock div {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+}
+
+/* ######## TOP INFO BLOCK ######### */
+
+/* LEFT */
+.leftInfoTopBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #E9501D;
-    
+    justify-content: center; 
+    background: #85BD95;
+    height: 50vh;
 } 
-.column-img {
-  
+
+/* RIGHT */
+.rightInfoTopBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #85BD95;
+    height: 50vh;
 } 
 
-.column h1{
-    color: #F7BE00;
+/* ########################################
+######## END OF TOP INFO BLOCK ######### 
+##########################################*/
+
+
+
+/* ######## BOTTOM INFO BLOCK ######### */
+
+/* LEFT BOTTOM */
+.leftInfoBottomBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background: #E9501D;
+    height: 50vh;
+} 
+
+/* RIGHT BOTTOM*/
+.rightInfoBottomBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #E9501D;
+    height: 50vh;
+} 
+/* ########################################
+######## END OF BOTTOM INFO BLOCK ######### 
+##########################################*/
+
+
+
+/* NEWSLETTER HEADING */
+.streched {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #85BD95;
 }
 
-.cat-right{
-    width: 20rem;
+.streched h1{
+    color: #E9501D;
+    padding-bottom: 1rem;
 }
+
+button {
+    background:#E7ABB5;
+    border: none;
+    padding: 0.5rem;
+    color: #132C5E;
+}
+
+input {
+    padding: 0.5rem;
+    border: none;
+   
+}
+
+::placeholder {
+    color: rgba(33,48, 90, 0.5);
+    font-family: Helvetica, sans-serif;
+}
+/* ########################################
+######## END OF NEWSLETTER HEADING ######### 
+##########################################*/
+
+
+  /* PATTERN  */
+.yellow-pattern {
+    display: block;
+    position: relative;
+    animation: linear;
+    animation: moveFromLeft;
+    animation-duration: 9s; 
+} 
+
+.patternBG {
+    background: #2c2718;
+}
+  /* END PATTERN  */
+
+footer {
+    padding: 5rem;
+}
+
+i {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #132C5E;
+}
+
+/* ########################################
+########### END OF PATTERN ################ 
+##########################################*/
+
+/* IPAD */
+@media only screen and (min-width: 1024px) {
+  
+    header {
+        background-size: 40vh;
+    }
+    a {
+        font-size: 2rem;
+    }
+    
+
+    .bottle {
+        margin-top: 7rem;
+        width: 70vw;
+    }
+
+    .logo {
+        width: 40vw;
+        animation: pop 5s;
+    }
+    
+    @keyframes pop {
+        0% {
+            width: 50vw;
+        }
+        50% {
+            width: 100vw;
+        }
+        100%{
+            width: 40vw;
+        }
+    }
+    .orangeHeading {
+        font-size: 4vh;
+    }
+
+    .yellowHeading {
+        font-size: 4vh;
+    }
+
+    p {
+        font-size: 2vh;
+        padding: 4rem;
+    }
+   
+    .cat-right {
+        width: 40vw;
+        padding: 3rem;
+    }
+
+    /* NEWSLETTER */
+    .streched h1 {
+        font-size: 4vh; 
+    }
+
+    button {
+        padding: 1.3rem;
+        font-size: 2rem;
+    }
+    
+    input {
+        padding: 2rem;
+    }
+    
+    ::placeholder {
+       font-size: 2rem;
+    }
+
+
+i {
+    font-size: 3rem;
+}
+    
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1440px) {
+
+    .bottle {
+        margin-top: 5rem;
+        width: 30vw;
+    }
+
+    .logo {
+        width: 30vw;
+        animation: pop 5s;
+    }
+    
+    @keyframes pop {
+        0% {
+            width: 70vw;
+        }
+        50% {
+            width: 100vh;
+        }
+        100%{
+            width: 30vw;
+        }
+    }
+
+    .infoBlockDesktop {
+        display: flex;
+    }
+    .infoBlockDesktop div {
+        width: 33%;
+        padding: 1rem;
+        display: flex;
+    }
+
+    .yellowHeading {
+        width: 33vw;
+        position: absolute;
+        margin: 5rem -1rem; 
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 10rem 1rem; */
+       
+    }
+
+
+    .rightInfoBlockDesktop {
+        background: #E9501D;
+        height: 50vh;
+    }
+    .centerInfoBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #E9501D;
+        height: 50vh;
+    }
+    .leftInfoBlockDesktop {
+      
+        background: #E9501D;
+        height: 50vh;
+    }
+    /* .newsLettersDesktop {
+        background-image:url(image/catzDesktop.png);
+        background-attachment: fixed;
+        background-size: cover;
+        height: 10vh;
+    } */
+
+    .catDeskopLeft {
+        width: 10vw;
+    }
+    /* ###############################################
+    ############### DISPLAY NONE#####################
+    ################################################## */
+    
+    .infoBlock {
+        display: none;
+    }
+    .newsLetters {
+        display: none;
+    }
+}
+
+
+
+
+
 
 /* #eyes {
     width: 10%;
@@ -147,128 +467,4 @@ ul, li{
         color: #F2CB05;
     }
 }   */
-
-
-.yellow-pattern {
-    display: block;
-    position: relative;
-    animation: linear;
-    animation: moveFromLeft;
-    animation-duration: 9s; 
-} 
-
-.patternBG {
-    background: #2c2718;
-}
-button {
-    background: pink;
-    border: none;
-    padding: 0.5rem;
-    color: #132C5E;
-}
-
-input {
-    padding: 0.5rem;
-    border: none;
-   
-}
-::placeholder {
-   color: #132C5E;
-}
-
-footer {
-    padding: 5rem;
-}
-
-i{
-    padding: 1rem;
-    font-size: 2rem;
-    color: #132C5E;
-}
-
-@media only screen and (max-width: 1024px) {
-
-    header {
-        background-image:url(image/svg/confetti.svg);
-        background-size: 25%;
-        height: 789px;
-
-    }
-
-    .bottle {
-        margin-top: 7rem;
-        width: 40%;
-    }
-
-    .logo {
-        width: 30%;
-        animation: pop 5s;
-    }
-    
-    @keyframes pop {
-        0% {
-            width: 50%;
-        }
-        50% {
-            width: 100%;
-        }
-        100%{
-            width: 30%;
-        }
-    }
-
-    .columns {
-        display: flex;
-       
-    }
-
-     .toggled{
-        display: none;
-    }
-    .cat-right{
-        width: 15rem;
-    }
-    
-}
-
-@media only screen and (max-width: 600px) {
-
-    header {
-        background-image:url(image/svg/confetti.svg);
-        background-size: 25%;
-        height: 740px;
-
-    }
-
-    .bottle {
-        margin-top: 7rem;
-        width: 90%;
-    }
-
-    .logo {
-        width: 50%;
-        animation: pop 5s;
-    }
-    
-    @keyframes pop {
-        0% {
-            width: 100%;
-        }
-        50% {
-            width: 150%;
-        }
-        100%{
-            width: 50%;
-        }
-    }
-
-    .columns {
-        display: flex;
-        flex-direction: column;
-    }
-
-     .toggled{
-        display: none;
-    }
-
-}
+/* 
