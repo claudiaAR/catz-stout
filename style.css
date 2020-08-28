@@ -83,8 +83,9 @@ nav{
 a {
     text-decoration: none;
     color: #85BD95;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: junegull, sans-serif;
+    cursor: pointer;
 }
 
 
