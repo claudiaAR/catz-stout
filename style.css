@@ -68,9 +68,11 @@ nav{
 
 a {
     text-decoration: none;
-    color: #E9501D;
+    color: #85BD95;
     font-size: 1rem;
 }
+
+
 
 
 ul, li{
@@ -438,9 +440,7 @@ i {
     .infoBlock {
         display: none;
     }
-    .newsLetters {
-        display: none;
-    }
+  
 }
 
 
